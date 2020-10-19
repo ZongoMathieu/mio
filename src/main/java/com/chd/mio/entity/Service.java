@@ -13,7 +13,7 @@ public class Service {
 	private Long id;
 	private String libelle;
 	@OneToMany(mappedBy = "service")
-	private Collection<Visitee> visitee;
+	private Collection<Visitee> visitees;
 	public Long getId() {
 		return id;
 	}
@@ -27,19 +27,19 @@ public class Service {
 		this.libelle = libelle;
 	}
 	public Collection<Visitee> getVisitee() {
-		return visitee;
+		return visitees;
 	}
-	public void setVisitee(Collection<Visitee> visitee) {
-		this.visitee = visitee;
+	public void setVisitee(Collection<Visitee> visitees) {
+		this.visitees = visitees;
 	}
 	public Service() {
 		super();
 	}
 	
-	public Service(String libelle, Collection<Visitee> visitee) {
+	public Service(String libelle, Collection<Visitee> visitees) {
 		super();
 		this.libelle = libelle;
-		this.visitee = visitee;
+		this.visitees = visitees;
 	}
 	@Override
 	public String toString() {

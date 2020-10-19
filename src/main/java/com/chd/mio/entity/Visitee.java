@@ -18,7 +18,7 @@ public class Visitee {
 	@ManyToOne
 	private Service service;
 	@OneToMany(mappedBy = "visitee")
-	private Collection<Visiteur> visiteur;
+	private Collection<Visiteur> visiteurs;
 	public Long getId() {
 		return id;
 	}
@@ -45,22 +45,22 @@ public class Visitee {
 	}
 	
 	public Collection<Visiteur> getVisiteur() {
-		return visiteur;
+		return visiteurs;
 	}
-	public void setVisiteur(Collection<Visiteur> visiteur) {
-		this.visiteur = visiteur;
+	public void setVisiteur(Collection<Visiteur> visiteurs) {
+		this.visiteurs = visiteurs;
 	}
 	public Visitee() {
 		super();
 	}
 	
 	
-	public Visitee(String nom_visitee, String prenom_visitee, Service service, Collection<Visiteur> visiteur) {
+	public Visitee(String nom_visitee, String prenom_visitee, Service service, Collection<Visiteur> visiteurs) {
 		super();
 		this.nom_visitee = nom_visitee;
 		this.prenom_visitee = prenom_visitee;
 		this.service = service;
-		this.visiteur = visiteur;
+		this.visiteurs = visiteurs;
 	}
 	@Override
 	public String toString() {

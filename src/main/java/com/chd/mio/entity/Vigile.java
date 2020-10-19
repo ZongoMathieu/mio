@@ -17,7 +17,7 @@ public class Vigile {
 	private String login;
 	private String password;
 	@OneToMany(mappedBy = "vigile")
-	private Collection<Visiteur> visiteur;
+	private Collection<Visiteur> visiteurs;
 	public Long getId() {
 		return id;
 	}
@@ -49,22 +49,22 @@ public class Vigile {
 		this.password = password;
 	}
 	public Collection<Visiteur> getVisiteur() {
-		return visiteur;
+		return visiteurs;
 	}
-	public void setVisiteur(Collection<Visiteur> visiteur) {
-		this.visiteur = visiteur;
+	public void setVisiteur(Collection<Visiteur> visiteurs) {
+		this.visiteurs = visiteurs;
 	}
 	public Vigile() {
 		super();
 	}
 	
-	public Vigile(String nom, String prenom, String login, String password, Collection<Visiteur> visiteur) {
+	public Vigile(String nom, String prenom, String login, String password, Collection<Visiteur> visiteurs) {
 		super();
 		this.nom = nom;
 		this.prenom = prenom;
 		this.login = login;
 		this.password = password;
-		this.visiteur = visiteur;
+		this.visiteurs = visiteurs;
 	}
 	@Override
 	public String toString() {

@@ -23,7 +23,7 @@ public class Visiteur {
 	@ManyToOne
 	private Visitee visitee;
 	@OneToMany(mappedBy = "visiteur")
-	private Collection<Visite> visite;
+	private Collection<Visite> visites;
 	public Long getId() {
 		return id;
 	}
@@ -74,16 +74,16 @@ public class Visiteur {
 	}
 	
 	public Collection<Visite> getVisite() {
-		return visite;
+		return visites;
 	}
-	public void setVisite(Collection<Visite> visite) {
-		this.visite = visite;
+	public void setVisite(Collection<Visite> visites) {
+		this.visites = visites;
 	}
 	public Visiteur() {
 		super();
 	}
 	public Visiteur(String cnib, String nom_visiteur, String prenom_visiteur, String date_exp_cnib, String signature,
-			Vigile vigile, Visitee visitee, Collection<Visite> visite) {
+			Vigile vigile, Visitee visitee, Collection<Visite> visites) {
 		super();
 		this.cnib = cnib;
 		this.nom_visiteur = nom_visiteur;
@@ -92,13 +92,13 @@ public class Visiteur {
 		this.signature = signature;
 		this.vigile = vigile;
 		this.visitee = visitee;
-		this.visite = visite;
+		this.visites = visites;
 	}
 	@Override
 	public String toString() {
 		return "Visiteur [id=" + id + ", cnib=" + cnib + ", nom_visiteur=" + nom_visiteur + ", prenom_visiteur="
 				+ prenom_visiteur + ", date_exp_cnib=" + date_exp_cnib + ", signature=" + signature + ", vigile="
-				+ vigile + ", visitee=" + visitee + ", visite=" + visite + "]";
+				+ vigile + ", visitee=" + visitee + ", visite=" + visites + "]";
 	}
 	
 	
