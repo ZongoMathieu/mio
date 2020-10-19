@@ -2,6 +2,7 @@ package com.chd.mio.entity;
 
 
 import java.util.Collection;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -93,6 +94,17 @@ public class Visiteur {
 		this.vigile = vigile;
 		this.visitee = visitee;
 		this.visites = visites;
+	}
+	public Visiteur(String cnib, String nom_visiteur, String prenom_visiteur, String date_exp_cnib, String signature) {
+		super();
+		this.cnib = cnib;
+		this.nom_visiteur = nom_visiteur;
+		this.prenom_visiteur = prenom_visiteur;
+		this.date_exp_cnib = date_exp_cnib;
+		this.signature = signature;
+	}
+	public Visiteur(String string, String string2, String string3, Date date, String string4) {
+		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() {

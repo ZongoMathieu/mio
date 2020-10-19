@@ -39,7 +39,17 @@ public class MioApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		Visiteur v1=new Visiteur("902","NANA","Roma", new Date(),"signature");
+		Service s=new Service();
+	
+		Vigile vigile=vigileRepository.save(new Vigile("KABORE", "Alex", "kabore", "kabore", null));
 		
+		Visitee visitee=visiteeRepository.save(new Visitee());
+		Visiteur visiteur=visiteurRepository.save(v1);
+		
+		Visite visite= visiteRepository.save(new Visite(new Date(), null, visiteur));
+		
+		Service service=serviceRepository.save(new Service("Application", null));
 		
 		
 		
