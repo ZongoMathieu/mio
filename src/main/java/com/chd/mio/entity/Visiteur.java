@@ -103,9 +103,7 @@ public class Visiteur {
 		this.date_exp_cnib = date_exp_cnib;
 		this.signature = signature;
 	}
-	public Visiteur(String string, String string2, String string3, Date date, String string4) {
-		// TODO Auto-generated constructor stub
-	}
+	
 	@Override
 	public String toString() {
 		return "Visiteur [id=" + id + ", cnib=" + cnib + ", nom_visiteur=" + nom_visiteur + ", prenom_visiteur="
