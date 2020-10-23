@@ -1,5 +1,6 @@
 package com.chd.mio.entity;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 import javax.persistence.Entity;
@@ -9,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Vigile {
+public class Vigile implements Serializable {
 	@Id @GeneratedValue(strategy =GenerationType.IDENTITY )
 	private Long id;
 	private String nom;

@@ -7,11 +7,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 @Entity
 public class Visite {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@Temporal(TemporalType.DATE)
 	private Date date_in;
+	@Temporal(TemporalType.TIME)
 	private Date date_out;
 	@ManyToOne
 	private Visiteur visiteur;
